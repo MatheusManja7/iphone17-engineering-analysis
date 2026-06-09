@@ -1,0 +1,247 @@
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --silver: #BBB9B7;
+    --blue: #202737;
+    --orange: #C16534;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ── FUNDO com efeito radial ── */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(ellipse 60% 50% at 20% 60%, rgba(193, 101, 52, 0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 40%, rgba(32, 39, 55, 0.8) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 80% at 50% 50%, #0a0a0a 0%, #000 100%);
+    pointer-events: none;
+}
+
+/* ── MAIN com scroll snap ── */
+main {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+/* ── CABEÇALHO ── */
+.cabecalho {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    width: 100%;
+    padding: 0.7rem 2rem;
+    background: rgba(10, 10, 10, 0.85);
+    border-bottom: 1px solid rgba(193, 101, 52, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.cab-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0 1rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cab-col:first-child { padding-left: 0; }
+.cab-col:last-child  { border-right: none; }
+
+.cab-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 600;
+}
+
+.cab-value {
+    font-size: 0.82rem;
+    color: var(--silver);
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cab-produto {
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* ── HERO ── */
+section.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 100px);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+    /* background-color: aqua; */
+}
+
+.box_iphone {
+    flex: 0 0 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box_text {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 3rem;
+    color: var(--white);
+    gap: 1rem;
+}
+
+.eyebrow {
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--orange);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.title-white {
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.0;
+}
+
+.title-orange {
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1.0;
+    margin-top: -0.5rem;
+}
+
+.specs {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    color: var(--silver);
+    margin-top: 0.5rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: var(--silver);
+    line-height: 1.9;
+    max-width: 420px;
+    margin-top: 0.25rem;
+}
+
+/* ── SCROLL HINT ── */
+.scroll-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 420px;
+}
+
+.scroll-hint span {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--silver);
+    opacity: 0.6;
+}
+
+.scroll-arrows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.arrow {
+    width: 18px;
+    height: 18px;
+    border-right: 2px solid var(--orange);
+    border-bottom: 2px solid var(--orange);
+    transform: rotate(45deg);
+    animation: bounce 1.6s ease-in-out infinite;
+}
+
+.arrow:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: rotate(45deg) translateY(0); opacity: 1; }
+    50%       { transform: rotate(45deg) translateY(4px); opacity: 0.4; }
+}
+
+/* ── WRAPPER / IFRAME ── */
+.wrapper {
+    width: 420px;
+    height: 680px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper iframe {
+    position: absolute;
+    top: -64px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 130px);
+    border: none;
+    background: transparent;
+}
+
+.zoom-block {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background: transparent;
+    cursor: grab;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-height: 750px) {
+    .wrapper       { width: 320px; height: 520px; }
+    .title-white,
+    .title-orange  { font-size: 4rem; }
+    .description   { font-size: 1rem; }
+}
