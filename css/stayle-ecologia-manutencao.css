@@ -2,9 +2,8 @@
 
 .ecologia-manutencao {
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     display: flex;
-    /* flex-direction: row; */
     align-items: center;
     justify-content: center;
     position: relative;
