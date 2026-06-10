@@ -1,0 +1,146 @@
+/* ── SECTION 2 — VISÃO GERAL DO PRODUTO ── */
+
+.visao-produto {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse 70% 60% at 70% 50%, rgba(32, 39, 55, 0.9) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 30% 50%, rgba(193, 101, 52, 0.06) 0%, transparent 60%);
+}
+
+.visao-produto::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 50% 70% at 50% 50%, rgba(32, 55, 100, 0.25) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── ESQUERDO: iPhone + ícones ── */
+.vp-visual {
+    flex: 0 0 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.vp-iphone {
+    width: 410px;
+    animation: vp-float 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 40px rgba(32, 55, 100, 0.5))
+            drop-shadow(0 0 80px rgba(193, 101, 52, 0.15));
+}
+
+@keyframes vp-float {
+    0%, 100% { transform: translateY(0px) rotate(-2deg); }
+    50%       { transform: translateY(-18px) rotate(2deg); }
+}
+
+.vp-icones {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    color: var(--blue2);
+}
+
+.vp-icone {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    animation: vp-icon-float 4s ease-in-out infinite;
+}
+
+.vp-icone:nth-child(1) { top: 22%;    left: 12%;  animation-delay: 0s;   }
+.vp-icone:nth-child(2) { top: 18%;    right: 14%; animation-delay: 0.8s; }
+.vp-icone:nth-child(3) { bottom: 22%; left: 14%;  animation-delay: 1.4s; }
+.vp-icone:nth-child(4) { bottom: 20%; right: 12%; animation-delay: 2s;   }
+
+@keyframes vp-icon-float {
+    0%, 100% { transform: translateY(0px);   opacity: 0.7; }
+    50%       { transform: translateY(-10px); opacity: 1;   }
+}
+
+/* ── DIREITO: texto ── */
+.vp-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 4rem 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.vp-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.vp-titulo {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+}
+
+.vp-titulo span {
+    color: var(--orange);
+}
+
+.vp-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.vp-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    transition: border-color 0.3s;
+}
+
+.vp-card:hover {
+    border-color: rgba(193, 101, 52, 0.35);
+}
+
+.vp-card-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 600;
+}
+
+.vp-card-texto {
+    font-size: 0.92rem;
+    color: var(--silver);
+    line-height: 1.65;
+}

@@ -1,0 +1,167 @@
+/* ── SECTION 7 — CONCLUSÃO ── */
+
+.conclusao {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 5rem;
+    gap: 2.5rem;
+    background:
+        radial-gradient(ellipse 60% 50% at 50% 50%, rgba(32, 39, 55, 0.8) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(193, 101, 52, 0.08) 0%, transparent 60%);
+}
+
+/* ── HEADER ── */
+.con-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+}
+
+.con-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.con-titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+}
+
+.con-titulo span {
+    color: var(--orange);
+}
+
+/* ── GRID ── */
+.con-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* ── CARDS ── */
+.con-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.con-card:hover {
+    transform: translateY(-5px);
+}
+
+.con-acerto {
+    border-color: rgba(80, 180, 100, 0.25);
+    background: rgba(80, 180, 100, 0.04);
+}
+
+.con-acerto:hover { border-color: rgba(80, 180, 100, 0.5); }
+
+.con-erro {
+    border-color: rgba(193, 80, 60, 0.25);
+    background: rgba(193, 80, 60, 0.04);
+}
+
+.con-erro:hover { border-color: rgba(193, 80, 60, 0.5); }
+
+.con-conclusao {
+    border-color: rgba(193, 101, 52, 0.3);
+    background: rgba(193, 101, 52, 0.05);
+}
+
+.con-conclusao:hover { border-color: rgba(193, 101, 52, 0.6); }
+
+/* ── TOPO DO CARD ── */
+.con-card-topo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.con-icone {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.con-acerto .con-icone {
+    background: rgba(80, 180, 100, 0.15);
+    color: #50b464;
+}
+
+.con-erro .con-icone {
+    background: rgba(193, 80, 60, 0.15);
+    color: #c1503c;
+}
+
+.con-conclusao .con-icone {
+    background: rgba(193, 101, 52, 0.15);
+    color: var(--orange);
+}
+
+.con-badge {
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+}
+
+.con-acerto .con-badge {
+    background: rgba(80, 180, 100, 0.12);
+    color: #50b464;
+    border: 1px solid rgba(80, 180, 100, 0.3);
+}
+
+.con-erro .con-badge {
+    background: rgba(193, 80, 60, 0.12);
+    color: #c1503c;
+    border: 1px solid rgba(193, 80, 60, 0.3);
+}
+
+.con-conclusao .con-badge {
+    background: rgba(193, 101, 52, 0.12);
+    color: var(--orange);
+    border: 1px solid rgba(193, 101, 52, 0.3);
+}
+
+.con-card-titulo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+}
+
+.con-card-texto {
+    font-size: 0.86rem;
+    color: var(--silver);
+    line-height: 1.75;
+}

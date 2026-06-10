@@ -1,0 +1,183 @@
+/* ── SECTION 5 — DESENHO UNIVERSAL E ERGONOMIA ── */
+
+.desenho-ergonomia {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 5rem;
+    gap: 2rem;
+    background:
+        radial-gradient(ellipse 60% 50% at 30% 50%, rgba(32, 39, 55, 0.8) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 70% 50%, rgba(193, 101, 52, 0.06) 0%, transparent 60%);
+}
+
+/* ── HEADER ── */
+.de-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.de-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.de-titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+}
+
+.de-titulo span {
+    color: var(--orange);
+}
+
+/* ── CARROSSEL ── */
+.de-carrossel {
+    width: 100%;
+    /* max-width: 1100px; */
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* background-color: aqua; */
+}
+
+.de-track {
+    display: flex;
+    gap: 1.2rem;
+    transition: transform 0.5s ease;
+}
+
+/* ── CARDS ── */
+.de-card {
+    flex: 0 0 calc(33.333% - 0.8rem);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
+    padding: 1.6rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.de-card:hover {
+    border-color: rgba(193, 101, 52, 0.4);
+    transform: translateY(-4px);
+}
+
+.de-card-icone {
+    font-size: 1.6rem;
+    color: var(--orange);
+    margin-bottom: 0.2rem;
+}
+
+.de-card-titulo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.de-card-texto {
+    font-size: 0.88rem;
+    color: var(--silver);
+    line-height: 1.7;
+}
+
+.de-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.3rem;
+}
+
+.de-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    border: 1px solid rgba(193, 101, 52, 0.35);
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+}
+
+/* ── CONTROLES ── */
+.de-controles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.de-seta {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 0.4rem;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.de-seta:hover { opacity: 1; }
+
+.de-arrow {
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid var(--orange);
+    border-bottom: 2px solid var(--orange);
+}
+
+.de-arrow.esq { transform: rotate(135deg); }
+.de-arrow.dir { transform: rotate(-45deg); }
+
+.de-dots {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.de-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--silver);
+    opacity: 0.3;
+    transition: opacity 0.3s, width 0.3s;
+    cursor: pointer;
+}
+
+.de-dot.ativo {
+    opacity: 1;
+    width: 20px;
+    border-radius: 3px;
+    background: var(--orange);
+}
+
+.de-track {
+    display: flex;
+    gap: 1.2rem;
+    transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* ← lento e suave */
+}
