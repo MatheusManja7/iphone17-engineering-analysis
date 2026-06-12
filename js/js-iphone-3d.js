@@ -1,3 +1,5 @@
+// JS do Iphone Rotativo 
+
 const iframe = document.getElementById('sketchfab');
 const client = new Sketchfab(iframe);
 
@@ -5,7 +7,6 @@ client.init('87fc1df741384124a8ce0226d2b2058d', {
     success: function(api) {
         api.start();
         api.addEventListener('viewerready', function() {
-            // Afasta a câmera para o modelo aparecer menor
             api.getCameraLookAt(function(err, camera) {
                 if (!err) {
                     const eye = camera.position;
@@ -20,8 +21,8 @@ client.init('87fc1df741384124a8ce0226d2b2058d', {
                     ];
 
                     api.setCameraLookAt(newEye, target, 0);
-                    api.setUserInteraction(false); // Desativa zoom e pan
-                    api.setUserInteraction(true);  // Reativa só rotação
+                    api.setUserInteraction(false);
+                    api.setUserInteraction(true);
                 }
             });
         });
@@ -43,7 +44,6 @@ client.init('87fc1df741384124a8ce0226d2b2058d', {
     preload: 1
 });
 
-// Bloqueia zoom
 const block = document.getElementById('zoomBlock');
 
 block.addEventListener('wheel', (e) => {
@@ -70,3 +70,5 @@ block.addEventListener('touchend', () => {
 block.addEventListener('touchmove', (e) => {
     if (e.touches.length > 1) e.preventDefault();
 }, { passive: false });
+
+// Matheus Manja 

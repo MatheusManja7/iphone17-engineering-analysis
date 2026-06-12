@@ -1,3 +1,5 @@
+// JS - Carrossel Segundario (Section - Desenho e Ergonomia)
+
 const track = document.getElementById('deTrack');
 
 const cards = Array.from(track.querySelectorAll('.de-card'));
@@ -29,7 +31,7 @@ function avancar() {
         pagina + 1 < totalPaginas
             ? pagina + 1
             : 0;
-
+            
     irParaCard(proxima);
 }
 
@@ -43,3 +45,5 @@ track.addEventListener('mouseleave', () => {
     clearInterval(autoplay);
     autoplay = setInterval(avancar, 12000);
 });
+
+// Matheus Manja

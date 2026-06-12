@@ -15,6 +15,7 @@
         radial-gradient(ellipse 50% 50% at 80% 50%, rgba(32, 39, 55, 0.7) 0%, transparent 60%);
 }
 
+
 /* ── CONTEÚDO ── */
 .em-conteudo {
     display: flex;
@@ -44,6 +45,7 @@
 .em-titulo span {
     color: var(--orange);
 }
+
 
 /* ── LISTA DE ITENS ── */
 .em-lista {
@@ -95,3 +97,5 @@
     color: var(--silver);
     line-height: 1.6;
 }
+
+/* Matheus Manja  */

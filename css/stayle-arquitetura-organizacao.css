@@ -3,7 +3,7 @@
 .arquitetura-geral {
     width: 100%;
     display: flex;
-    flex-direction: column;  /* empilha spec-box + carrossel */
+    flex-direction: column; 
     align-items: stretch;
     position: relative;
     overflow: hidden;
@@ -11,7 +11,7 @@
 
 .carrossel {
     width: 100%;
-    height: 65vh;            /* altura fixa só no carrossel agora */
+    height: 65vh;           
     position: relative;
 }
 
@@ -75,7 +75,6 @@
     pointer-events: none;
     transition: opacity 0.6s ease, transform 0.6s ease;
     transform: translateX(60px);
-    /* background-color: aqua; */
 }
 
 .slide.active {
@@ -96,7 +95,6 @@
     flex-direction: column;
     gap: 1.2rem;
     max-width: 800px;
-    /* background-color: blue; */
 }
 
 .slide-categoria {
@@ -137,6 +135,7 @@
     border-radius: 999px;
 }
 
+
 /* ── LADO DIREITO: IMAGEM ── */
 .slide-imagem {
     flex: 1;
@@ -146,7 +145,6 @@
     position: relative;
     left: 50px;
     height: 100%;
-    /* background-color: violet; */
 }
 
 .img-float {
@@ -156,7 +154,6 @@
     align-items: center;
     justify-content: center;
     animation: float 3.5s ease-in-out infinite;
-    /* background-color: beige; */
 }
 
 .img-float img {
@@ -169,6 +166,7 @@
     0%, 100% { transform: translateY(0px); }
     50%       { transform: translateY(-16px); }
 }
+
 
 /* ── SLIDE BARRAMENTOS (sem imagem) ── */
 .slide-texto-full {
@@ -218,11 +216,12 @@
     line-height: 1.4;
 }
 
+
 /* ── CONTROLES ── */
 .carrossel-controles {
     position: absolute;
     inset: 0;
-    pointer-events: none;   /* o container em si não bloqueia cliques */
+    pointer-events: none; 
 }
 
 .seta {
@@ -257,6 +256,7 @@
 .seta-arrow.esq { transform: rotate(135deg); }
 .seta-arrow.dir { transform: rotate(-45deg); }
 
+
 /* ── DOTS ── */
 .carrossel-dots {
     position: absolute;
@@ -285,3 +285,5 @@
     border-radius: 3px;
     background: var(--orange);
 }
+
+/* Matheus Manja  */

@@ -1,3 +1,5 @@
+/* ── INDEX — STAYLE PRINCIPAL ── */
+
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +26,7 @@ body::before {
     pointer-events: none;
 }
 
+
 /* ── MAIN com scroll snap ── */
 main {
     position: relative;
@@ -41,6 +44,7 @@ main::-webkit-scrollbar-thumb {
     background: var(--orange);
     border-radius: 2px;
 }
+
 
 /* ── CABEÇALHO ── */
 .cabecalho {
@@ -90,6 +94,7 @@ main::-webkit-scrollbar-thumb {
     font-weight: 700;
 }
 
+
 /* ── HERO ── */
 section.hero {
     display: flex;
@@ -100,7 +105,6 @@ section.hero {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     position: relative;
-    /* background-color: aqua; */
 }
 
 .box_iphone {
@@ -164,6 +168,7 @@ section.hero {
     margin-top: 0.25rem;
 }
 
+
 /* ── SCROLL HINT ── */
 .scroll-hint {
     display: flex;
@@ -208,6 +213,7 @@ section.hero {
     50%       { transform: rotate(45deg) translateY(4px); opacity: 0.4; }
 }
 
+
 /* ── WRAPPER / IFRAME ── */
 .wrapper {
     width: 420px;
@@ -234,14 +240,13 @@ section.hero {
     cursor: grab;
 }
 
-/* ── RODAPÉ ── */
 
+/* ── RODAPÉ ── */
 .footer {
     width: 100%;
     padding: 1.5rem 0;
     background: rgba(255, 255, 255, 0.02);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,19 +254,34 @@ section.hero {
 
 .footer-content {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.footer-main {
+    display: flex;
     align-items: center;
     gap: 0.8rem;
-
     color: var(--silver);
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.03em;
 }
 
-.footer-content i {
+.footer-main i {
     color: var(--orange);
     font-size: 1.2rem;
 }
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #808080;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
 
 /* ── RESPONSIVO ── */
 @media (max-height: 750px) {
@@ -270,3 +290,5 @@ section.hero {
     .title-orange  { font-size: 4rem; }
     .description   { font-size: 1rem; }
 }
+
+/* Matheus Manja  */

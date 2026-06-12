@@ -26,6 +26,7 @@
     z-index: 0;
 }
 
+
 /* ── HEADER ── */
 .ct-header {
     display: flex;
@@ -58,6 +59,7 @@
 .ct-titulo span {
     color: var(--orange);
 }
+
 
 /* ── GRID DE CARDS ── */
 .ct-grid {
@@ -110,3 +112,5 @@
     color: var(--silver);
     line-height: 1.7;
 }
+
+/* Matheus Manja  */

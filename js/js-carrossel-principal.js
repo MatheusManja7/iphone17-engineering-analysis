@@ -1,3 +1,5 @@
+// JS - Carrossel Principal (Section - Arquitetura Geral)
+
 const slides = document.querySelectorAll('.slide');
 const dotsContainer = document.getElementById('dots');
 const carrosselPrev = document.getElementById('prev');
@@ -45,3 +47,5 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') irParaSlide(atual + 1);
     if (e.key === 'ArrowLeft')  irParaSlide(atual - 1);
 });
+
+// Matheus Manja 

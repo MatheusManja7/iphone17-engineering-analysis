@@ -13,6 +13,7 @@
     gap: 2.5rem;
 }
 
+
 /* ── HEADER ── */
 .con-header {
     display: flex;
@@ -44,6 +45,7 @@
     color: var(--orange);
 }
 
+
 /* ── GRID ── */
 .con-grid {
     display: grid;
@@ -52,6 +54,7 @@
     width: 100%;
     max-width: 1200px;
 }
+
 
 /* ── CARDS ── */
 .con-card {
@@ -89,6 +92,7 @@
 }
 
 .con-conclusao:hover { border-color: rgba(193, 101, 52, 0.6); }
+
 
 /* ── TOPO DO CARD ── */
 .con-card-topo {
@@ -162,3 +166,5 @@
     color: var(--silver);
     line-height: 1.75;
 }
+
+/* Matheus Manja  */
